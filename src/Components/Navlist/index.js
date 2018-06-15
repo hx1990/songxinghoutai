@@ -40,6 +40,7 @@ import IncomeList from '../IncomeList'
 import WithdrawalList from '../WithdrawalList'
 import DivideInto from '../DivideInto'
 import DistributionWithMoeny from '../DistributionWithMoeny'
+import OwnerManagement from '../OwnerManagement'
 
 import { Menu, Icon } from 'antd';
 const SubMenu = Menu.SubMenu;
@@ -142,6 +143,12 @@ class Navlist extends Component{
                                     {/*</NavLink>*/}
                                 </SubMenu>
                             </Menu>
+                        </li>
+                        <li>
+                            <NavLink activeClassName="activeRoute" to="/ownerManagement">
+                                <img alt='img' src={agentUrl}/>
+                                <span>业主管理</span>
+                            </NavLink>
                         </li> 
                         <li>
                             <NavLink activeClassName="activeRoute" to="/governmentSystem">
@@ -196,6 +203,7 @@ class Navlist extends Component{
                     <Route path="/withdrawalList" component={WithdrawalList}/>
                     <Route path="/distributionWithMoeny" component={DistributionWithMoeny}/>
                     <Route path="/divideInto" component={DivideInto}/>
+                    <Route path="/ownerManagement" component={OwnerManagement}/>
                 </div>
             </Router>
         </div>)

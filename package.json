@@ -97,5 +97,6 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "proxy":"https://sx.juyinhe.cn"
+  
+  "proxy":"http://192.168.100.107:8888"
 }

@@ -67,7 +67,5 @@ class NormalLoginForm extends React.Component {
 
 const Login = Form.create()(NormalLoginForm);
 
-
-
 export default Login
 
