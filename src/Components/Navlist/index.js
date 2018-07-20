@@ -15,7 +15,7 @@ import ExpressDoorUrl from "../../images/company.png"
 import companyUrl from "../../images/company.png"
 import mailUrl from "../../images/mail.png"
 import agentUrl from "../../images/agent.png"
-import accountUrl from "../../images/account.png"
+// import accountUrl from "../../images/account.png"
 import authorityUrl from "../../images/authority.png"
 import SetingUrl from "../../images/set.png"
 
@@ -40,11 +40,16 @@ import IncomeList from '../IncomeList'
 import WithdrawalList from '../WithdrawalList'
 import DivideInto from '../DivideInto'
 import DistributionWithMoeny from '../DistributionWithMoeny'
+<<<<<<< HEAD
 import OwnerManagement from '../OwnerManagement'
+=======
+import Owner from '../Owner'
+import AddOwner from '../AddOwner'
+>>>>>>> '2018/7/20'
 
 import { Menu, Icon } from 'antd';
 const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
+// const MenuItemGroup = Menu.ItemGroup;
 const history = createHistory()
 // const location='localhost:3000/'
 class Navlist extends Component{
@@ -157,6 +162,12 @@ class Navlist extends Component{
                             </NavLink>
                         </li> 
                         <li>
+                            <NavLink activeClassName="activeRoute" to="/owner">
+                                <img alt='img' src={agentUrl}/>
+                                <span>业主管理</span>
+                            </NavLink>
+                        </li> 
+                        <li>
                             <NavLink activeClassName="activeRoute" to="/agent">
                                 <img alt='img' src={agentUrl}/>
                                 <span>代理商管理</span>
@@ -203,7 +214,12 @@ class Navlist extends Component{
                     <Route path="/withdrawalList" component={WithdrawalList}/>
                     <Route path="/distributionWithMoeny" component={DistributionWithMoeny}/>
                     <Route path="/divideInto" component={DivideInto}/>
+<<<<<<< HEAD
                     <Route path="/ownerManagement" component={OwnerManagement}/>
+=======
+                    <Route path="/owner" component={Owner}/>
+                    <Route path="/addOwner" component={AddOwner}/>
+>>>>>>> '2018/7/20'
                 </div>
             </Router>
         </div>)

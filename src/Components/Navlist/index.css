@@ -15,7 +15,7 @@
    margin-left: 50px;
    margin-right: 10px;
 }
-.nav a {
+.nav .routerWrap .linkList a {
     display: flex;
     align-items: center;
     height: 100%;

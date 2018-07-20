@@ -81,11 +81,11 @@ class AddDoor extends Component {
 		}, "杭州");
 	}
 	// 编写自定义函数,创建标注
-	function addMarker(point,label){
-		var marker = new BMap.Marker(point);
-		map.addOverlay(marker);
-		marker.setLabel(label);
-	}
+	// function addMarker(point,label){
+	// 	var marker = new BMap.Marker(point);
+	// 	map.addOverlay(marker);
+	// 	marker.setLabel(label);
+	// }
    }
    handleProvinceChange(){
    }

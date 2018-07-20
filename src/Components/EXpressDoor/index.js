@@ -37,7 +37,7 @@ const columns = [{
       { text: 'Male', value: 'male' },
       { text: 'Female', value: 'female' },
     ],
-    width: '20%',
+    
   },
   {
     title: '绑定快递员',
@@ -46,7 +46,12 @@ const columns = [{
       { text: 'Male', value: 'male' },
       { text: 'Female', value: 'female' },
     ],
-    width: '20%',
+    
+  },
+  {
+    title: '绑定电话卡',
+    dataIndex: 'phoneNumber',
+    key:'phoneNumber',
   },
   {
     title: '接口账户',
@@ -55,7 +60,7 @@ const columns = [{
       { text: 'Male', value: 'male' },
       { text: 'Female', value: 'female' },
     ],
-    width: '20%',
+    
   }, 
   {
     title: '运行状态',
@@ -63,11 +68,7 @@ const columns = [{
     filters: [
       { text: 'Male', value: 'male' },
       { text: 'Female', value: 'female' },
-    ],
-    width: '20%',
-  },{
-    title: '',
-    dataIndex: 'email',
+    ]
   }]
 class ExpressDoor extends Component{
     constructor(){

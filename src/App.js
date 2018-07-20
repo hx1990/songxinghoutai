@@ -22,17 +22,17 @@ class App extends Component {
   }
   
   render() {
-    if(this.state.bshow){
-       return (<div>
-          <Login msg={this.fnCallback.bind(this)} />
-       </div>)
-    }else{
+    // if(this.state.bshow){
+    //    return (<div>
+    //       <Login msg={this.fnCallback.bind(this)} />
+    //    </div>)
+    // }else{
        return(
            <div>  
             <Home />
          </div>
     )
-    }
+  //   }
   }
 }
 
