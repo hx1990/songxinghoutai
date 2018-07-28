@@ -40,14 +40,18 @@ import IncomeList from '../IncomeList'
 import WithdrawalList from '../WithdrawalList'
 import DivideInto from '../DivideInto'
 import DistributionWithMoeny from '../DistributionWithMoeny'
-<<<<<<< HEAD
 import OwnerManagement from '../OwnerManagement'
-=======
+
 import Owner from '../Owner'
 import AddOwner from '../AddOwner'
->>>>>>> '2018/7/20'
-
 import { Menu, Icon } from 'antd';
+
+import BusinessList from '../BusinessList'
+
+import BusinessAudit from '../BusinessAudit'
+
+import AddProperty from '../AddProperty'
+
 const SubMenu = Menu.SubMenu;
 // const MenuItemGroup = Menu.ItemGroup;
 const history = createHistory()
@@ -100,23 +104,43 @@ class Navlist extends Component{
                             </Menu>
                         </li>
                         <li>
+                            <Menu onClick={this.handleClick} defaultSelectedKeys={['1']} defaultOpenKeys={['sub1']} mode="inline" >
+                                <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>物业管理</span></span>}>
+                                    <NavLink activeClassName="activeRoute" to="/addProperty">
+                                    <Menu.Item key="5" className="subtitle">添加物业</Menu.Item>
+                                    </NavLink>
+                                    {/*<NavLink activeClassName="activeRoute" to="/certificationAudit">*/}
+                                    {/* <Menu.Item key="6" className="subtitle">代理商审核</Menu.Item> */}
+                                    {/*</NavLink>*/}
+                                </SubMenu>
+                            </Menu>
+                        </li>
+                        <li>
+                            <Menu onClick={this.handleClick} defaultSelectedKeys={['1']} defaultOpenKeys={['sub1']} mode="inline" >
+                                <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>企业管理</span></span>}>
+                                    <NavLink activeClassName="activeRoute" to="/businessList">
+                                       <Menu.Item key="5" className="subtitle">企业列表</Menu.Item>
+                                    </NavLink>
+                                    <NavLink activeClassName="activeRoute" to="/businessAudit">
+                                       <Menu.Item key="6" className="subtitle">企业审核</Menu.Item>
+                                    </NavLink>
+                                </SubMenu>
+                            </Menu>
+                        </li>
+
+                        <li>
                             <NavLink activeClassName="activeRoute" to="/expressCost">
                                <img alt='img' src={companyUrl}/>
                                <span>快递资费管理</span>
                             </NavLink>
                         </li>
                         <li>
-                            {/*<NavLink activeClassName="activeRoute" to="/account">
-                                <img alt='img' src={accountUrl}/>
-                                <span>资费结算</span>
-                            </NavLink>*/}
                             <Menu onClick={this.handleClick} defaultSelectedKeys={['1']} defaultOpenKeys={['sub1']} mode="inline" >
                                 <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>资费结算</span></span>}>
                                     <NavLink activeClassName="activeRoute" to="/runningWater">
                                     <Menu.Item key="5" className="subtitle">流水表</Menu.Item>
                                     </NavLink>
-                                    {/*<NavLink activeClassName="activeRoute" to="/certificationAudit">*/}
-                                       {/*<Menu.Item key="6" className="subtitle">结算人</Menu.Item>*/}
+                                    
                                        <SubMenu key="sub3" title="结算人">
                                            
                                             <Menu.Item className="subtitle" key="7">
@@ -127,9 +151,7 @@ class Navlist extends Component{
                                                 <NavLink activeClassName="activeRoute" to="/withdrawalList">提现清单</NavLink>
                                             </Menu.Item>
                                         </SubMenu>
-                                    {/*</NavLink>*/}
-                                    {/*<NavLink activeClassName="activeRoute" to="/certificationAudit">*/}
-                                       {/*<Menu.Item key="6" className="subtitle">代理商</Menu.Item>*/}
+                                    
                                        <SubMenu key="sub4" title="代理商">
                                             <Menu.Item className="subtitle" key="9">
                                                 <NavLink activeClassName="activeRoute" to="/divideInto">流水分成</NavLink>
@@ -137,15 +159,14 @@ class Navlist extends Component{
                                             <Menu.Item className="subtitle" key="1">
                                                 <NavLink activeClassName="activeRoute" to="/withdrawalList">提现清单</NavLink>
                                             </Menu.Item>
-                                            {/*<Menu.Item className="subtitle" key="1">提现清单</Menu.Item>*/}
                                         </SubMenu>
-                                    {/*</NavLink>*/}
+                                    
                                     <NavLink activeClassName="activeRoute" to="/distributionWithMoeny">
                                        <Menu.Item key="6" className="subtitle">资费清分表</Menu.Item>
                                     </NavLink>
-                                    {/*<NavLink activeClassName="activeRoute" to="/certificationAudit">*/}
+                                    
                                        <Menu.Item key="4" className="subtitle">报价单</Menu.Item>
-                                    {/*</NavLink>*/}
+                                    
                                 </SubMenu>
                             </Menu>
                         </li>
@@ -214,12 +235,12 @@ class Navlist extends Component{
                     <Route path="/withdrawalList" component={WithdrawalList}/>
                     <Route path="/distributionWithMoeny" component={DistributionWithMoeny}/>
                     <Route path="/divideInto" component={DivideInto}/>
-<<<<<<< HEAD
                     <Route path="/ownerManagement" component={OwnerManagement}/>
-=======
                     <Route path="/owner" component={Owner}/>
                     <Route path="/addOwner" component={AddOwner}/>
->>>>>>> '2018/7/20'
+                    <Route path="/businessList" component={BusinessList}/>
+                    <Route path="/businessAudit" component={BusinessAudit}/>
+                    <Route path='/addProperty' component={AddProperty}/>
                 </div>
             </Router>
         </div>)
